@@ -1,0 +1,226 @@
+/* Bakery-Themed Contact Page */
+.contact {
+    padding: 100px 20px 80px;
+    background: linear-gradient(135deg, #f5e8d3 0%, #e9d8b5 100%);
+    min-height: 100vh;
+    background-image: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
+    background-blend-mode: overlay;
+    color: #3f2a1d; /* Espresso brown */
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .contact-header h1 {
+    font-size: 3.5rem;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(63, 42, 29, 0.2);
+  }
+  
+  .contact-header p {
+    font-size: 1.4rem;
+    color: #8b5e3c; /* Toasted almond */
+    font-style: italic;
+    font-family: 'Georgia', serif;
+  }
+  
+  .contact-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .contact-form-section, .contact-info {
+    flex: 1;
+    min-width: 300px;
+    background: #fffdf7; /* Off-white dough */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(63, 42, 29, 0.1);
+    padding: 30px;
+  }
+  
+  .contact-form-section h2, .contact-info h2 {
+    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    color: #3f2a1d;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-input, .form-textarea {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 2px solid #d4a373; /* Golden crust */
+    border-radius: 10px;
+    background: #fff;
+    color: #3f2a1d;
+    font-family: 'Arial', sans-serif;
+    resize: vertical;
+  }
+  
+  .form-input::placeholder, .form-textarea::placeholder {
+    color: #8b5e3c;
+  }
+  
+  .form-textarea {
+    min-height: 120px;
+  }
+  
+  .submit-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background: #d4a373;
+    border: none;
+    border-radius: 50px;
+    color: #fffdf7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .submit-btn:hover {
+    background: #b5895a; /* Darker gold */
+    box-shadow: 0 6px 14px rgba(181, 137, 90, 0.5);
+  }
+  
+  .success-message {
+    font-size: 1.4rem;
+    color: #d4a373;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .contact-info p {
+    font-size: 1.2rem;
+    color: #8b5e3c;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .map-placeholder {
+    height: 200px;
+    background: #f5e8d3;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #3f2a1d;
+    font-family: 'Georgia', serif;
+    margin-top: 20px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .contact-form-section, .contact-info {
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact {
+      padding: 80px 15px 60px;
+    }
+    .contact-header h1 {
+      font-size: 2.5rem;
+    }
+    .contact-header p {
+      font-size: 1.2rem;
+    }
+    .contact-container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    .contact-form-section h2, .contact-info h2 {
+      font-size: 1.8rem;
+    }
+    .form-input, .form-textarea {
+      font-size: 1rem;
+    }
+    .submit-btn {
+      padding: 10px 25px;
+      font-size: 1.1rem;
+    }
+    .map-placeholder {
+      height: 150px;
+    }
+  }
+
+  .map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(63, 42, 29, 0.1);
+  }
+  
+  .map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .contact-form-section,
+  .contact-info {
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact {
+      padding: 80px 15px 60px;
+    }
+    .contact-header h1 {
+      font-size: 2.5rem;
+    }
+    .contact-header p {
+      font-size: 1.2rem;
+    }
+    .contact-container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    .contact-form-section h2,
+    .contact-info h2 {
+      font-size: 1.8rem;
+    }
+    .form-input,
+    .form-textarea {
+      font-size: 1rem;
+    }
+    .submit-btn {
+      padding: 10px 25px;
+      font-size: 1.1rem;
+    }
+    .map-container {
+      max-height: 200px; /* Limit height on mobile */
+    }
+  }

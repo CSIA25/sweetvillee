@@ -1,0 +1,63 @@
+/* Replace the previous testimonials styles with this */
+.testimonials-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .testimonials-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .testimonials-container {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping to stack vertically */
+    gap: 20px; /* Space between cards */
+    overflow-x: auto; /* Horizontal scroll if content overflows */
+    justify-content: center; /* Center the row */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 10px; /* Space for scroll bar */
+  }
+  
+  .testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    min-width: 300px; /* Fixed width for consistency */
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    transition: transform 0.2s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+  }
+  
+  .author {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #f8b400;
+    margin: 0;
+  }
+  
+  /* Optional: Style the scrollbar for better aesthetics */
+  .testimonials-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .testimonials-container::-webkit-scrollbar-thumb {
+    background-color: #f8b400;
+    border-radius: 4px;
+  }

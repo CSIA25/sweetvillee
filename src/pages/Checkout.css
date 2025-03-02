@@ -1,0 +1,196 @@
+/* Bakery-Themed Checkout Page */
+.checkout {
+    padding: 100px 20px 80px;
+    background: linear-gradient(135deg, #f5e8d3 0%, #e9d8b5 100%);
+    min-height: 100vh;
+    background-image: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
+    background-blend-mode: overlay;
+  }
+  
+  .checkout-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .checkout-header h1 {
+    font-size: 3.5rem;
+    color: #3f2a1d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(63, 42, 29, 0.2);
+    font-family: 'Georgia', serif;
+  }
+  
+  .checkout-header p {
+    font-size: 1.4rem;
+    color: #8b5e3c;
+    font-style: italic;
+    font-family: 'Georgia', serif;
+  }
+  
+  .empty-message {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #8b5e3c;
+    font-family: 'Georgia', serif;
+  }
+  
+  .checkout-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .checkout-summary {
+    flex: 1;
+    min-width: 300px;
+    background: #fffdf7;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(63, 42, 29, 0.1);
+    padding: 30px;
+  }
+  
+  .checkout-summary h2 {
+    font-size: 2rem;
+    color: #3f2a1d;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .checkout-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f5e8d3;
+    padding-bottom: 15px;
+  }
+  
+  .checkout-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  .checkout-details h3 {
+    font-size: 1.5rem;
+    color: #3f2a1d;
+    margin-bottom: 10px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .checkout-details p {
+    font-size: 1.3rem;
+    color: #d4a373;
+  }
+  
+  .checkout-total {
+    font-size: 2rem;
+    color: #3f2a1d;
+    text-align: right;
+    margin-top: 20px;
+    font-family: 'Georgia', serif;
+  }
+  
+  .checkout-form {
+    flex: 1;
+    min-width: 300px;
+    background: #fffdf7;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(63, 42, 29, 0.1);
+    padding: 30px;
+  }
+  
+  .checkout-form h2 {
+    font-size: 2rem;
+    color: #3f2a1d;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-input {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 2px solid #d4a373;
+    border-radius: 10px;
+    background: #fff;
+    color: #3f2a1d;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .form-input::placeholder {
+    color: #8b5e3c;
+  }
+  
+  .submit-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background: #d4a373;
+    border: none;
+    border-radius: 50px;
+    color: #fffdf7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .submit-btn:hover {
+    background: #b5895a;
+    box-shadow: 0 6px 14px rgba(181, 137, 90, 0.5);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .checkout {
+      padding: 80px 15px 60px;
+    }
+    .checkout-header h1 {
+      font-size: 2.5rem;
+    }
+    .checkout-header p {
+      font-size: 1.2rem;
+    }
+    .checkout-container {
+      flex-direction: column;
+      gap: 25px;
+    }
+    .checkout-img {
+      width: 80px;
+      height: 80px;
+    }
+    .checkout-details h3 {
+      font-size: 1.4rem;
+    }
+    .checkout-details p {
+      font-size: 1.2rem;
+    }
+  }
+
+  .payment-row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-input.half-width {
+    width: 48%; /* Half-width inputs for expiry and CVV */
+  }
+  
+  .submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }

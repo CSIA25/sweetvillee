@@ -1,0 +1,284 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #1a120b; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #f5e8d3; 
+  font-size: 1.2rem;
+  font-family: "Georgia", serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background: #d4a373; 
+  color: #2b1e16; 
+  box-shadow: 0 4px 10px rgba(212, 163, 115, 0.5);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #f5e8d3;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 60%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-cart {
+  position: relative;
+}
+
+.cart-link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #f5e8d3;
+}
+
+.cart-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cart-link:hover .cart-icon {
+  transform: scale(1.15);
+  color: #d4a373;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #d4a373;
+  color: #2b1e16;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  box-shadow: 0 2px 6px rgba(63, 42, 29, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.cart-link:hover .cart-count {
+  transform: scale(1.1);
+}
+
+.navbar-profile {
+  position: relative;
+}
+
+.profile-icon {
+  font-size: 2rem;
+  color: #f5e8d3;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-icon:hover {
+  color: #d4a373;
+  transform: scale(1.15);
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background: #c19a6b;
+  border: none;
+  border-radius: 4px;
+  color: #1a120b;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Arial", sans-serif;
+  transition: background 0.3s ease;
+  width: 100%; 
+  text-align: center;
+}
+
+.logout-btn:hover {
+  background: #d4a373;
+}
+
+/* New styles for the logout popup */
+.logout-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(26, 18, 11, 0.8); /* Dark overlay matching #1a120b */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Above navbar */
+}
+
+.logout-popup {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  font-family: "Georgia", serif;
+}
+
+.logout-popup h3 {
+  margin: 0 0 15px;
+  color: #2b1e16; /* Dark brown text */
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.logout-popup p {
+  margin: 0 0 25px;
+  color: #666;
+  font-size: 1.1rem;
+  font-family: "Arial", sans-serif;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.confirm-btn,
+.cancel-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Arial", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn {
+  background: #d4a373; /* Bakery accent color */
+  color: #1a120b;
+}
+
+.confirm-btn:hover {
+  background: #c19a6b;
+  box-shadow: 0 4px 10px rgba(212, 163, 115, 0.5);
+}
+
+.cancel-btn {
+  background: #f5e8d3; /* Light beige */
+  color: #2b1e16;
+}
+
+.cancel-btn:hover {
+  background: #e0d5b8;
+  box-shadow: 0 4px 10px rgba(245, 232, 211, 0.5);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .navbar-links {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+  .nav-link:hover::after {
+    width: 40%;
+  }
+  .navbar-right {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .cart-icon,
+  .profile-icon {
+    font-size: 1.8rem;
+  }
+  .cart-count {
+    width: 20px;
+    height: 20px;
+    font-size: 0.9rem;
+    top: -8px;
+    right: -8px;
+  }
+  .profile-dropdown {
+    right: -10px;
+    min-width: 120px;
+  }
+  .logout-popup {
+    width: 280px;
+    padding: 20px;
+  }
+  .logout-popup h3 {
+    font-size: 1.3rem;
+  }
+  .logout-popup p {
+    font-size: 1rem;
+  }
+  .confirm-btn,
+  .cancel-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
